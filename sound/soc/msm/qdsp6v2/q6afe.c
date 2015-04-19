@@ -629,7 +629,7 @@ static void afe_send_cal_spkr_prot_rx(int port_id)
 				   __func__);
 	}
 }
-
+/*
 static int afe_send_hw_delay(u16 port_id, u32 rate)
 {
 	struct hw_delay_entry delay_entry;
@@ -694,7 +694,7 @@ fail_cmd:
 	return ret;
 
 }
-
+*/
 void afe_send_cal(u16 port_id)
 {
 	pr_debug("%s\n", __func__);
@@ -1311,7 +1311,7 @@ int afe_port_start(u16 port_id, union afe_port_config *afe_config,
 		return ret;
 
 	afe_send_cal(port_id);
-	afe_send_hw_delay(port_id, rate);
+	//afe_send_hw_delay(port_id, rate);
 
 	/* Start SW MAD module */
 	mad_type = afe_port_get_mad_type(port_id);
